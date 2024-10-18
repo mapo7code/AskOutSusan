@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Out</title>
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Flower&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: pink; /* Set the background color to pink */
+            font-family: 'Moon Flower', sans-serif; /* Use the specified font for the body */
+            margin: 0;
+            padding: 20px;
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            flex-direction: column; /* Stack content vertically */
+        }
+
+        .container {
+            text-align: center; /* Center align the text */
+            margin-bottom: 20px; /* Add space below the main container */
+        }
+
+        #notes-section {
+            border: 2px solid lightpink; /* Light pink border */
+            padding: 10px; /* Padding inside the box */
+            height: 200px; /* Set a smaller height for the box */
+            overflow-y: auto; /* Allow vertical scrolling */
+            background-color: white; /* Background color for the letter box */
+            margin-top: 20px; /* Add margin above for separation */
+            width: 80%; /* Make the box wider */
+            max-width: 800px; /* Set a maximum width for the box */
+            margin-left: auto; /* Center align horizontally */
+            margin-right: auto; /* Center align horizontally */
+            display: none; /* Hide the box initially */
+            font-family: Arial, sans-serif; /* Set normal font for the letter text */
+        }
+
+        h1, h2 {
+            margin: 0; /* Remove default margins */
+        }
+
+        .buttons {
+            margin: 10px 0; /* Space between buttons */
+        }
+
+        #gif {
+            max-width: 200px; /* Limit the GIF size */
+            max-height: 200px; /* Limit the GIF height */
+            margin-bottom: 20px; /* Space below the GIF */
+        }
+
+        #yes-btn {
+            background-color: green; /* Set Yes button color */
+            color: white; /* Set Yes button text color */
+            border: none; /* Remove default border */
+            padding: 10px; /* Add padding */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        #no-btn {
+            background-color: red; /* Set No button color */
+            color: white; /* Set No button text color */
+            border: none; /* Remove default border */
+            padding: 10px; /* Add padding */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        #play-music-btn {
+            background-color: lightblue; /* Set Play Music button color to light blue */
+            color: white; /* Set Play Music button text color */
+            border: none; /* Remove default border */
+            padding: 10px; /* Add padding */
+            cursor: pointer; /* Change cursor to pointer */
+            margin-top: 10px; /* Add space above the button */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="position: relative;">
+        <img id="gif" src="https://media1.giphy.com/media/gDfteqLchLcRTtjAD7/200w.gif?cid=6c09b952y0nxxw8qktf9step4y5amz16cgrvgzd83bpwyz40&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Cute GIF" />
+        <h1 id="question">Will you be my girlfriend Susan?</h1> <!-- Original line -->
+
+        <div id="notes-section">
+            <h2>Letter to Sue:</h2>
+            <p>
+                Ever since the start of us talking, I felt such a strong connection with you. Every single minute I've been around you, it makes my heart drop. I know I mess up, I know I've done wrong, and I don't want to lose you because of my mistakes. You're the only girl I want. I want to make you mine; I want to make us a real thing. I'll work on myself, I'll make myself better for you. I'll do anything for you, but I want it to be with you right by my side. I want us to help each other, support each other, love each other. I just want to communicate with you, and I'm so sorry for all the times I've messed up. I'm going to treat you like the queen you are; you're so special, so I'm going to act like you are. I always want to play and talk with you because honestly, I'm falling for you so hard, and I just want to learn everything about you. I don't want to just text; I know you're so busy all the time, and I promise I'll be patient. Just let us learn about each other and love each other. With that being said, will you be my girlfriend and future wife, Susan?
+            </p>
+        </div>
+
+        <div class="buttons">
+            <button id="yes-btn" onclick="yesClicked()">Yes</button>
+            <button id="no-btn" onclick="noClicked()">No</button>
+        </div>
+        <p id="response" class="hidden"></p>
+
+        <audio id="background-music" src="background-music.mp3" loop></audio>
+        <button id="play-music-btn" onclick="playAudio()">Your Favorite Song Button</button> <!-- Button to play music -->
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to play audio on button click
+        function playAudio() {
+            var audio = document.getElementById('background-music');
+            audio.play();
+        }
+
+        // Function when Yes button is clicked
+        function yesClicked() {
+            document.getElementById('response').innerText = "Yay! I'm excited for our date!";
+            document.getElementById('notes-section').style.display = 'block'; // Show the notes section when yes is clicked
+        }
+
+        // Function when No button is clicked
+        function noClicked() {
+            document.getElementById('response').innerText = "I go cry):";
+            // Additional logic for No button can go here
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿body {
+    font-family: 'Moon Flower', Arial, sans-serif; /* Apply the Moon Flower font */
+    text-align: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default body margin */
+    display: flex; /* Enable Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: pink; /* Set background color to pink */
+}
+
+.container {
+    margin-top: 50px; /* You can remove this if you want it exactly in the middle */
+    height: 300px; /* Fixed height */
+    width: 400px; /* Fixed width */
+    position: relative; /* Allow absolute positioning of buttons */
+    display: flex; /* Enable Flexbox for inner elements */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+h1 {
+    font-size: 2.5em; /* Adjust the font size for the question */
+}
+
+#notes-section h2 {
+    font-size: 2em; /* Make the section header similar to the main question */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+#notes-section ul {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+}
+
+#notes-section li {
+    font-size: 1.5em; /* Adjust the font size for the notes */
+    margin: 10px 0; /* Space out the list items */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    transition: transform 0.3s ease; /* Transition for smooth scaling */
+    border: 2px solid lightpink; /* Light pink border around buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background-color: transparent; /* Make button background transparent */
+    color: white; /* Text color */
+}
+
+
+#yes-btn {
+    background-color: green; /* Set Yes button color to green */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#no-btn {
+    background-color: red; /* Set No button color to red */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#notes-section {
+    display: none; /* Initially hide notes section */
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-5px, 0);
+    }
+
+    50% {
+        transform: translate(5px, 0);
+    }
+
+    75% {
+        transform: translate(-5px, 0);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+button.shake {
+    animation: shake 0.5s; /* Shake animation duration */
+}
+#gif {
+    max-width: 100%; /* Ensure the GIF fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between the GIF and the heading */
+    border: 5px solid lightpink; /* Light pink border */
+    border-radius: 10px; /* Optional: rounded corners for a softer look */
+    padding: 5px; /* Optional: space between the GIF and the border */
+}
